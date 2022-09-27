@@ -12,7 +12,7 @@
 }   
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "roboto", sans-serif;
     font-size: 14px;
     color:var(--primary-text-color);
     background-color:var(--primary-white-color);
@@ -105,7 +105,7 @@ ul {
 .header-contact {
     display: inline-flex;
     align-items: center;
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     padding-top: 32px;
     padding-bottom: 32px;
@@ -148,7 +148,6 @@ ul {
 .navig-item.current {
     position: relative;
     display: block;
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -157,7 +156,7 @@ ul {
     display: block;
     content: "";
 
-    margin-top: 30px;
+    margin-top: 29px;
     width: 100%;
     height: 4px;
 
@@ -170,7 +169,7 @@ ul {
 
 .navigation-link {
     display: inline-block;
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding-top: 32px;
     padding-bottom: 32px;
     position: relative;
@@ -248,7 +247,7 @@ button {
     line-height: 1.87;       
     letter-spacing: 0.06em; 
   
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color:var(--primary-white-color);
     background-color:var(--accent-text-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -430,7 +429,8 @@ img {
     height: 44px;
     border-radius: 50%;
 
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -477,7 +477,8 @@ img {
     height: 92px;
     justify-content: center;
     align-items: center;
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     border: 1px solid #AFB1B8;
     border-radius: 4px;
@@ -523,7 +524,7 @@ img {
  .footer-address {
     font-style: normal;
     line-height: 1.71;
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color:var(--primary-white-color);
  }
 
@@ -534,7 +535,7 @@ img {
 .footer-contact {
     font-style: normal;
     line-height: 1.71;
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color:var(--primary-color);
 }
 
@@ -570,7 +571,7 @@ img {
     justify-content: center;
     align-items: center;
     background-color:rgba(255, 255, 255, 0.1);
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-navigation {
     display: flex;
@@ -584,7 +585,7 @@ img {
 
 .site-navigation:hover, 
 .site-navigation:focus {
-    background:var(--accent-text-color);
+    background-color:var(--accent-text-color);
 }
 
 .footer-site {
@@ -639,7 +640,8 @@ img {
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     font-family: inherit;
     font-weight: 500;
@@ -688,12 +690,14 @@ img {
 .user-wrapper {
     padding:20px 24px;
    
-    border:left right bottom var(--secondary-border-color) 1px solid;
+    border-left: var(--secondary-border-color) 1px solid;
+    border-right: var(--secondary-border-color) 1px solid;
+    border-bottom: var(--secondary-border-color) 1px solid;
    
 }
 .wrap-list {
     display: block;
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .wrap-list:hover,
 .wrap-list:focus {
@@ -803,8 +807,8 @@ img {
    
     width: 30px;
     height: 30px;
-    /* margin-top: 8px;
-    margin-right: 8px; */
+    margin-top: 8px;
+    margin-right: 8px;
     border-radius: 50%;
 
     display: flex;
@@ -812,22 +816,26 @@ img {
     align-items: center;
     cursor: pointer;
     fill:var(--primary-text-color);
-    transition: translate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  
     background:var(--primary-white-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .modal-close {
+    display: flex;
     position: absolute;
-    top: 0;
-    right: 0;
+    justify-content: center;
+    align-items: center;
+
+    width:18px;
+    height: 18px;
     fill: currentColor;
     
 }
 
 
-.modal-close:hover {
+.close-botton:hover {
     fill:var(--accent-text-color); 
 }
 
